@@ -27,7 +27,6 @@ The agent currently has these tools:
 - Python
 - LangChain
 - Google Gemini
-- LangGraph
 - ReAct Agent Pattern
 
 ## Example
