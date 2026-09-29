@@ -1,12 +1,17 @@
 from dotenv import load_dotenv
 load_dotenv()
+import os
 
 #--------------------------------------
 # STEP 1: Initializing the Model
 #--------------------------------------
 
-from langchain.chat_models import init_chat_model
-model = init_chat_model("google_genai:gemini-2.5-flash")
+from langchain_openai import ChatOpenAI
+model = ChatOpenAI(
+    model="qwen/qwen-plus-2025-07-28:free",
+    base_url="https://api.xkiro.com/v1",
+    api_key=os.getenv("XKIRO_API_KEY")
+)
 
 
 #------------------------------------------
